@@ -23,5 +23,5 @@ This project is a developer-focused blog application created with EJS, MongoDB, 
 
 1. Check the `package.json` for required packages.
 2. Download dependencies
-3. write in terminal: (npm run dev) or (npm node app.js)
+3. write in terminal: (npm run dev) or (node app.js)
 4. go to (localhost:4000)
