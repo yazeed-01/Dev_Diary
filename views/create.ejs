@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Post</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css"
+rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<link rel="stylesheet" href="/css/styles_editor.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Dev Diary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">All Posts</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/posts/new">New Post</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Create New Post</h1>
+    <form action="/posts/store" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input name="title" type="text" class="form-control" id="title" placeholder="Enter title">
+      </div>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <textarea id="body" name="body" class="form-control" id="body" placeholder="Enter body"></textarea>
+        <script>
+          $('#body').summernote({
+          tabsize: 2,
+          height: 200
+          });
+          </script>
+      
+      
+      </div>
+      <div class="form-group">
+        <label for="code">Code</label>
+        <textarea id="code-editor" name="code" class="form-control" id="code" placeholder="Enter code"></textarea>
+      </div>
+
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+        <label>Image</label>
+        <input type="file" class="form-control" id="image" name="image">
+        </div>
+        </div>
+        
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
