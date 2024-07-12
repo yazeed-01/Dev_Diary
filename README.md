@@ -19,6 +19,9 @@ This project is a developer-focused blog application created with EJS, MongoDB, 
 - **Bootstrap**: Frontend framework for responsive design.
 - **HTML/CSS**: Frontend styling and structure.
 
-## Installation
+## How to Run
 
-1. **Clone the repository:**
+1. Check the `package.json` for required packages.
+2. Download dependencies
+3. write in terminal: (npm run dev) or (npm node app.js)
+4. go to (localhost:4000)
